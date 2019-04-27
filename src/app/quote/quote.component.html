@@ -2,5 +2,9 @@
 <hr>
 
 <ul>
-  <li *ngFor='let quote of quotes'>{{quote.quote}}</li>
+  <div *ngFor='let quote of quotes;let i =index'>
+    <li >{{quote.quote}} due on {{quote.completeDate|date}}</li>
+    <button (click)='toogleDetails(i)'>See Details</button>
+    <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (isComplete)= 'DeleteQuote($event,i)'></app-quote-details>
+  </div>
 </ul>
