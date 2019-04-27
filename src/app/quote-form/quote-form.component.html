@@ -1,28 +1,41 @@
 <div class="container-fluid">
   <div class="row">
-    <form>
-      <div class="form-group">
+    <form #quoteForm='ngForm'>
 
+      <div class="form-group">
         <label for="quote">Quote</label>
-        <input type="text" required class="form-control" id="quote">
+        <input type="text" class="form-control" id="quote" [(ngModel)]="newQuote.quote" name="quote" #quote="ngModel" required>
 
+        <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger">
+          <p> Quote is Required</p>
+
+        </div>
       </div>
       <div class="form-group">
 
-          <label for="author">Author</label>
-          <input type="text" required class="form-control" id="author">
+        <label for="author">Author</label>
+        <input type="text" class="form-control" id="author" [(ngModel)]="newQuote.author" name="author" #author="ngModel" required>
 
+        <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
+          <p> Author is Required</p>
+        </div>
       </div>
       <div class="form-group">
 
-          <label for="submit">Name of submitter</label>
-          <input type="text" required class="form-control" id="submit">
+        <label for="submit">Name of submitter</label>
+        <input type="text" class="form-control" id="submit" [(ngModel)]="newQuote.submit" name="submit" #submit="ngModel" required>
 
+        <div [hidden]="submit.valid || submit.pristine" class="alert alert-danger">
+          <p> Name of submitter is Required</p>
+        </div>
       </div>
       <div class="form-group">
-          <label for="completeDate">Date</label>
-          <input type='date' id="completeDate" required>
+        <label for="completeDate">Date</label>
+        <input type='date' id="completeDate" [(ngModel)]="newQuote.completeDate" name="completeDate" #completeDate="ngModel" required>
 
+        <div [hidden]="completeDate.valid || completeDate.pristine" class="alert alert-danger">
+          <p> Date is Required</p>
+        </div>
       </div>
     </form>
   </div>
