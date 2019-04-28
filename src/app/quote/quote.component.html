@@ -1,5 +1,12 @@
-<body ng-app="">
-  <h1>My quotes</h1>
+<body>
+  <header>
+    <div class="header__bg"></div>
+    <h1>Quotes </h1>
+  </header>
+
+  <section>
+    <h2>Section Content</h2>
+  </section>
   <div class="container">
     <div class="row">
         <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
