@@ -8,8 +8,8 @@ import { Quote } from '../quote'
 })
 export class QuoteComponent implements OnInit {
   quotes = [
-    new Quote('God is good!', 'Bible', 'Peter', new Date(2018,3,14)),
-    new Quote('Work hard.', 'Me', 'Melvin', new Date(2018,5,6)),
+    new Quote(2, 'God is good!', 'Bible', 'Peter', new Date(2018,3,14)),
+    new Quote(2, 'Work hard.', 'Me', 'Melvin', new Date(2018,5,6)),
   ]
 
   DeleteQuote(isComplete,index){
@@ -24,6 +24,17 @@ export class QuoteComponent implements OnInit {
 
   toogleDetails(index){
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
+  }
+
+  addNewQuote(quote){
+    let quoteLength = this.quotes.length;
+    quote.id=quoteLength+1;
+    quote.completeDate = new Date(quote.completeDate)
+    this.quotes.push(quote)
+  }
+
+  likeFunction(index) {
+    this.quotes[index].count += 1;
   }
 
   constructor() { }
