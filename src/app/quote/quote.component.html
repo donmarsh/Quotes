@@ -11,8 +11,9 @@
         <li >{{quote.quote}} due on {{quote.completeDate|date}}</li>
         <button (click)='toogleDetails(i)'>See Details</button><br>
         <button  (click)='likeFunction(i)'>Like</button>
-        <p>{{quote.count}}</p>
+        <p>{{quote.count1}}</p>
         <button  (click)='dislikeFunction(i)'>Dislike</button>
+        <p>{{quote.count2}}</p>
 
         <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (isComplete)= 'DeleteQuote($event,i)'></app-quote-details>
       </div>

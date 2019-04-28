@@ -34,7 +34,10 @@ export class QuoteComponent implements OnInit {
   }
 
   likeFunction(index) {
-    this.quotes[index].count += 1;
+    this.quotes[index].count1 += 1;
+  }
+  dislikeFunction(index) {
+    this.quotes[index].count2 += 1;
   }
 
   constructor() { }
