@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <div class="row">
-    <form #quoteForm='ngForm'>
+    <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
 
       <div class="form-group">
         <label for="quote">Quote</label>
@@ -37,6 +37,7 @@
           <p> Date is Required</p>
         </div>
       </div>
+      <button type="Submit" class="btn btn-success btn-lg">Add Button</button>
     </form>
   </div>
 </div>
