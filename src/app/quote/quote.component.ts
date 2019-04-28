@@ -39,7 +39,7 @@ export class QuoteComponent implements OnInit {
     realquote.showDescription = quote.showDescription;
     realquote.submit = quote.submit;
 
-    this.quotes.push(quote)
+    this.quotes.push(realquote)
   }
 
   likeFunction(index) {
