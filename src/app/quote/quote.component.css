@@ -24,10 +24,17 @@ h1 {
   text-align: center;
 }
 h2 {
-  margin: 0;
+  margin-left:  50px;
   padding: 100px 0;
-  font: 44px "Arial";
+  font: 30px "Arial";
   text-align: center;
+  color: #2E86C1;
+}
+.line {
+  border-color: #2E86C1;
+  border-width: 1px;
+  margin-left: 100px;
+  margin-right: 100px;
 }
 header h1 {
   position: relative;
