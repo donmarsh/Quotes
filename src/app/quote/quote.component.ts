@@ -28,8 +28,17 @@ export class QuoteComponent implements OnInit {
 
   addNewQuote(quote){
     let quoteLength = this.quotes.length;
+    let realquote = new Quote(0,"","","",new Date());
     quote.id=quoteLength+1;
-    quote.completeDate = new Date(quote.completeDate)
+    realquote.id= quote.id;
+    realquote.completeDate = new Date(quote.completeDate)
+    realquote.author = quote.author;
+    realquote.count1 = quote.count1;
+    realquote.count2 = quote.count2;
+    realquote.quote = quote.quote;
+    realquote.showDescription = quote.showDescription;
+    realquote.submit = quote.submit;
+
     this.quotes.push(quote)
   }
 
