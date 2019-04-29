@@ -18,9 +18,9 @@
       <div *ngFor='let quote of quotes;let i =index'>
         <p class="author1">{{quote.quote}} posted on <span class="datie">{{quote.completeDate|date}}</span></p>
         <button (click)='toogleDetails(i)'>See Description</button><br>
-        <button  (click)='likeFunction(i)'>Like</button>
+        <button class="like" (click)='likeFunction(i)'>Like</button>
         <p>{{quote.count1}}</p>
-        <button  (click)='dislikeFunction(i)'>Dislike</button>
+        <button class="dislike" (click)='dislikeFunction(i)'>Dislike</button>
         <p>{{quote.count2}}</p>
 
         <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (isComplete)= 'DeleteQuote($event,i)'></app-quote-details>

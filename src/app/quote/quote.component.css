@@ -61,3 +61,19 @@ header h1 {
   letter-spacing: 3px;
 
 }
+.dislike {
+  background-color: #2E86C1;
+  border-radius: 12px;
+  width: 2.5cm;
+  color: white;
+  margin-left: 5cm;
+
+}
+.like {
+  background-color: #2E86C1;
+  border-radius: 12px;
+  width: 2.5cm;
+  color: white;
+  margin-left: 5cm;
+
+}
