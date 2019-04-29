@@ -77,3 +77,18 @@ header h1 {
   margin-left: 5cm;
 
 }
+.displayone {
+  color: blue;
+  margin-left: 5cm;
+}
+.displaytwo {
+  color: #2E86C1;
+  margin-left: 5cm;
+}
+.toogle{
+  margin-left: 5cm;
+  width: 4cm;
+  border-radius: 12px;
+  background-color: #2E86C1;
+  color: white;
+}
