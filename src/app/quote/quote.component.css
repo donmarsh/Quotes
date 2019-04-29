@@ -44,3 +44,20 @@ header h1 {
   margin-left: 500px;
   margin-top: -50px;
 }
+.author1{
+  font-size: 0.6cm;
+  font-family: serif;
+  font-weight: bold;
+  margin-left: 5cm;
+  color: #2E86C1;
+}
+.grey {
+  background-color: #EBF5FB;
+}
+.datie {
+  font-size: 15px;
+  font-weight: lighter;
+  margin-left: 15px;
+  letter-spacing: 3px;
+
+}
