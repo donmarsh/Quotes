@@ -9,12 +9,10 @@
   <hr class="line">
   <div class="container">
     <div class="row">
-        <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+      <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
     </div>
     <hr>
-
     <div class="grey">
-
       <div *ngFor='let quote of quotes;let i =index'>
         <p class="author1">{{quote.quote}} posted on <span class="datie">{{quote.completeDate|date}}</span></p>
         <button class="toogle" (click)='toogleDetails(i)'>See Description</button><br>
@@ -22,7 +20,6 @@
         <p class="displayone">{{quote.count1}}</p>
         <button class="dislike" (click)='dislikeFunction(i)'>Dislike</button>
         <p class="displaytwo">{{quote.count2}}</p>
-
         <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (isComplete)= 'DeleteQuote($event,i)'></app-quote-details>
       </div>
     </div>
