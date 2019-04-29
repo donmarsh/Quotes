@@ -15,5 +15,8 @@
 }
 .deletebutton{
   margin-left: 5cm;
-  color: #2E86C1;
+  background-color: #2E86C1;
+  color: white;
+  border-radius: 12cm;
+  width: 2cm;
 }
